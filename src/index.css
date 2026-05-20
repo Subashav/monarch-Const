@@ -6,14 +6,15 @@
 
 /* CSS Variables */
 :root {
-  --primary-color: #2563EB;
-  --primary-dark: #1d4ed8;
-  --secondary-color: #64748b;
-  --accent-color: #2563EB;
-  --success-color: #22C55E;
+  --primary-color: #09637E;
+  --primary-dark: #074d61;
+  --primary-light: #1480a3;
+  --secondary-color: #09637E;
+  --accent-color: #09637E;
+  --success-color: #09637E;
   --warning-color: #F59E0B;
   --danger-color: #EF4444;
-  --info-color: #3b82f6;
+  --info-color: #09637E;
 
   --white: #ffffff;
   --light-gray: #F8FAFC;
@@ -21,17 +22,18 @@
   --gray-200: #e2e8f0;
   --gray-300: #cbd5e1;
   --gray-400: #94a3b8;
-  --gray-500: #64748b;
-  --gray-600: #475569;
-  --gray-700: #334155;
-  --gray-800: #1e293b;
-  --gray-900: #0F172A;
+  --gray-500: #09637E;
+  --gray-600: #074d61;
+  --gray-700: #053a49;
+  --gray-800: #042e3a;
+  --gray-900: #09637E;
 
-  --text-main: #111827;
+  --text-main: #09637E;
+  --text-dark: #053a49;
 
   --sidebar-width: 280px;
-  --sidebar-bg: #0F172A;
-  --sidebar-text: #F8FAFC;
+  --sidebar-bg: #09637E;
+  --sidebar-text: #FFFFFF;
   --header-height: 70px;
   --border-radius: 8px;
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -90,7 +92,7 @@
   /* Login Page Styles */
   .login-page {
     @apply min-h-screen flex items-center justify-center p-4;
-    background: linear-gradient(135deg, #2563EB 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #09637E 0%, #074d61 100%);
   }
 
   .login-container {
@@ -117,7 +119,7 @@
 
   .logo-section {
     @apply text-white p-8 text-center;
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #09637E 0%, #088395 100%);
   }
 
   .logo-section h1 {
@@ -147,7 +149,7 @@
 
   .form-group input:focus {
     @apply outline-none border-primary;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(9, 99, 126, 0.1);
   }
 
   .help-text {
@@ -176,7 +178,7 @@
 
   .demo-login:hover {
     @apply border-primary text-primary;
-    background-color: rgba(37, 99, 235, 0.05);
+    background-color: rgba(9, 99, 126, 0.05);
   }
 
   .demo-login i {
@@ -266,7 +268,7 @@
   }
 
   .sidebar-logo i {
-    @apply text-2xl text-blue-500;
+    @apply text-2xl text-primary-light;
   }
 
   .sidebar.collapsed .sidebar-logo span {
@@ -294,12 +296,12 @@
   }
 
   .nav-link:hover {
-    @apply bg-gray-800 text-white border-l-blue-500;
+    @apply bg-gray-800 text-white border-l-primary;
   }
 
   .nav-link.active {
-    background: linear-gradient(90deg, rgba(37, 99, 235, 0.2) 0%, rgba(37, 99, 235, 0) 100%);
-    @apply text-blue-400 border-l-blue-500 font-medium;
+    background: linear-gradient(90deg, rgba(9, 99, 126, 0.2) 0%, rgba(9, 99, 126, 0) 100%);
+    @apply text-primary-light border-l-primary font-medium;
   }
 
   .nav-link i {
@@ -544,7 +546,7 @@
   }
 
   .badge-primary {
-    background-color: rgba(37, 99, 235, 0.1);
+    background-color: rgba(9, 99, 126, 0.1);
     color: var(--primary-color);
   }
 

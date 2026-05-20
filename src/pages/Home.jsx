@@ -34,7 +34,7 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-background text-text-main font-sans">
             {/* Navbar (Fixed/Sticky) */}
-            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-gradient-to-b from-navy-900/80 to-transparent py-6'
+            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-gradient-to-b from-primary/20 via-primary/5 to-transparent py-6 blur-navbar'
                 }`}>
                 <div className="container mx-auto flex justify-between items-center">
                     <div className="flex items-center space-x-3">
@@ -42,9 +42,9 @@ const Home = () => {
                     </div>
                     <button
                         onClick={() => navigate('/login')}
-                        className={`font-medium px-6 py-2 rounded-full backdrop-blur-sm transition-all duration-300 flex items-center gap-2 ${scrolled
-                            ? 'bg-primary text-white hover:bg-primary-dark shadow-md'
-                            : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                        className={`font-medium px-8 py-2.5 rounded-full backdrop-blur-md transition-all duration-300 flex items-center gap-2 ${scrolled
+                            ? 'bg-primary text-white hover:bg-primary-dark shadow-lg'
+                            : 'bg-navy/10 hover:bg-navy text-navy hover:text-white border border-navy/20 shadow-sm'
                             }`}
                     >
                         <i className="fas fa-sign-in-alt"></i> Login
@@ -58,7 +58,7 @@ const Home = () => {
             {/* Section 2: Why Us (Value Proposition) */}
             <section className="py-20 px-6 bg-white">
                 <div className="container mx-auto text-center max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12">
                         Why Choose <span className="text-primary">Site Ledger?</span>
                     </h2>
                     <div className="grid md:grid-cols-3 gap-10">
@@ -88,7 +88,7 @@ const Home = () => {
             </section>
 
             {/* Section 3: Feature Highlights */}
-            <section className="py-20 px-6 bg-[#D1F2EB] relative overflow-hidden">
+            <section className="py-20 px-6 bg-primary-pale/30 relative overflow-hidden">
                 <div className="container mx-auto relative z-10">
                     <div className="text-center mb-16">
                         <span className="text-primary font-bold uppercase tracking-wider text-sm">Key Capabilities</span>
@@ -214,7 +214,7 @@ const Home = () => {
             </section>
 
             {/* Section 7: Mobile App Promotion */}
-            <section className="py-20 px-6 bg-navy-900 text-white relative overflow-hidden">
+            <section className="py-20 px-6 bg-navy text-white relative overflow-hidden">
                 <div className="container mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
                     <div className="md:w-1/2">
                         <span className="text-primary font-bold uppercase tracking-wider text-sm">Mobile First</span>
@@ -234,7 +234,7 @@ const Home = () => {
                     <div className="md:w-1/2 flex justify-center">
                         <div className="relative">
                             <div className="absolute inset-0 bg-primary opacity-20 blur-3xl rounded-full"></div>
-                            <img src={mobileAppImage} alt="Site Ledger Mobile App" className="relative z-10 rounded-3xl shadow-2xl border-4 border-navy-800 transform rotate-3 hover:rotate-0 transition-all duration-500 max-w-xs md:max-w-sm" />
+                            <img src={mobileAppImage} alt="Site Ledger Mobile App" className="relative z-10 rounded-3xl shadow-2xl border-4 border-primary-dark transform rotate-3 hover:rotate-0 transition-all duration-500 max-w-xs md:max-w-sm" />
                         </div>
                     </div>
                 </div>
@@ -251,7 +251,7 @@ const Home = () => {
                     <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                         {/* Admin Side */}
                         <div className="bg-white rounded-3xl shadow-soft overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-                            <div className="h-48 bg-gradient-to-r from-navy-900 to-navy-800 flex items-center justify-center p-8 relative">
+                            <div className="h-48 bg-gradient-to-r from-navy to-navy-800 flex items-center justify-center p-8 relative">
                                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                                 <i className="fas fa-user-tie text-6xl text-white/90"></i>
                             </div>
@@ -260,7 +260,7 @@ const Home = () => {
                                 <p className="text-text-light mb-8">For Super Admins & Managers</p>
                                 <button
                                     onClick={() => navigate('/login?role=admin')}
-                                    className="w-full py-4 bg-navy-900 text-white rounded-xl font-bold hover:bg-navy-800 transition-colors shadow-lg shadow-navy-900/20"
+                                    className="w-full py-4 bg-navy text-white rounded-xl font-bold hover:bg-navy-800 transition-colors shadow-lg shadow-navy/20"
                                 >
                                     Admin Login
                                 </button>
@@ -289,11 +289,11 @@ const Home = () => {
             </section>
 
             {/* Section 5: Footer */}
-            <footer className="bg-[#D1F2EB] text-navy-900 py-12 border-t border-teal-900/10">
+            <footer className="bg-navy text-white py-12 border-t border-white/10">
                 <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8">
                     <div className="col-span-1 md:col-span-2">
-                        <div className="flex items-center space-x-2 text-navy-900 mb-4">
-                            <img src={siteLogo} alt="Site Ledger" className="h-10 w-auto" />
+                        <div className="flex items-center space-x-2 text-white mb-4">
+                            <img src={siteLogo} alt="Site Ledger" className="h-10 w-auto brightness-0 invert" />
                             <span className="text-xl font-bold">Site Ledger</span>
                         </div>
                         <p className="text-sm text-navy-800/70 leading-relaxed max-w-sm">
@@ -301,16 +301,16 @@ const Home = () => {
                         </p>
                     </div>
                     <div>
-                        <h4 className="text-navy-900 font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
-                        <ul className="space-y-2 text-sm text-navy-800/80">
+                        <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                        <ul className="space-y-2 text-sm text-white/70">
                             <li><a href="#" className="hover:text-primary transition-colors">Support Center</a></li>
                             <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
                             <li><a href="#" className="hover:text-primary transition-colors">System Status</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="text-navy-900 font-bold mb-4 uppercase text-sm tracking-wider">Contact IT</h4>
-                        <ul className="space-y-2 text-sm text-navy-800/80">
+                        <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact IT</h4>
+                        <ul className="space-y-2 text-sm text-white/70">
                             <li className="flex items-center space-x-2">
                                 <i className="fas fa-envelope text-primary"></i>
                                 <span>support@ccplerp.com</span>
@@ -322,7 +322,7 @@ const Home = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="border-t border-teal-900/10 mt-12 pt-6 text-center text-xs text-navy-800/50">
+                <div className="border-t border-white/10 mt-12 pt-6 text-center text-xs text-white/50">
                     &copy; {new Date().getFullYear()} Site Ledger. All rights reserved.
                 </div>
             </footer>

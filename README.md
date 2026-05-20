@@ -148,3 +148,7 @@ Then open your browser to **http://localhost:5173** to see the login page!
 ---
 
 **Note**: The UI is identical to the original. All functionality has been preserved and enhanced with React's component-based architecture.
+
+---
+
+Maintained by MONARCH.

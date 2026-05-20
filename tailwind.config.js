@@ -16,22 +16,23 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: '#50C878', // Emerald Green (User Requested)
-          dark: '#0B6E4F',    // Royal Amethyst (Darker Teal for hover)
-          light: '#82E0AA',   // Lighter Emerald
-          pale: '#E8F8F5',    // Very light mint for backgrounds
+          DEFAULT: '#09637E', // Dark Teal
+          dark: '#074d61',
+          light: '#1480a3',
+          pale: '#d1e6ec',    // Very light teal
+          extra: '#eef6f8',   // Softest teal
         },
         navy: {
-          DEFAULT: '#1E293B', // Slate 800 (Neutral Dark Blue-Grey) - Less "Green"
-          800: '#0F172A',     // Slate 900
-          900: '#020617',     // Slate 950
+          DEFAULT: '#09637E',
+          800: '#074d61',
+          900: '#053a49',
         },
-        background: '#F8FAFC',
+        background: '#FFFFFF',
         text: {
-          main: '#111827',
-          light: '#64748b',
+          main: '#09637E',
+          light: '#1480a3',
         },
-        success: '#50C878', // Emerald Green
+        success: '#2ECC71',
         warning: '#F59E0B',
         error: '#EF4444',
       },

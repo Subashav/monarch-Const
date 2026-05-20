@@ -34,28 +34,28 @@ const HeroSlider = () => {
             {/* Left Content Section */}
             <div className="md:w-1/2 p-8 md:p-20 flex flex-col justify-center relative z-20 bg-white">
                 <div className="animate-fade-in-left">
-                    <div className="inline-flex items-center space-x-2 bg-primary-pale text-navy-900 px-4 py-1.5 rounded-full w-fit mb-8 border border-primary/20 shadow-sm">
+                    <div className="inline-flex items-center space-x-2 bg-primary-pale text-primary px-4 py-1.5 rounded-full w-fit mb-8 border border-primary/20 shadow-sm">
                         <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
                         <span className="text-sm font-semibold">Live ERP Portal</span>
                     </div>
 
-                    <h1 className="text-5xl md:text-8xl font-black text-navy-900 leading-[0.95] mb-6 tracking-tighter">
+                    <h1 className="text-5xl md:text-8xl font-black text-primary leading-[0.95] mb-6 tracking-tighter">
                         CONSTRUCT <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-500 to-blue-600">
+                        <span className="text-transparent bg-clip-text bg-primary">
                             EVERYTHING.
                         </span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-lg font-medium leading-tight">
-                        The spiky edge you need. Real-time manpower & material tracking for <span className="text-navy-900 border-b-4 border-primary">modern giants</span>.
+                        The spiky edge you need. Real-time manpower & material tracking for <span className="text-primary border-b-4 border-primary">modern giants</span>.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-5 mb-12">
                         <button className="bg-primary hover:bg-primary-dark text-white font-black text-lg py-5 px-10 rounded-2xl shadow-2xl shadow-primary/40 transform hover:-translate-y-2 transition-all duration-300 flex items-center justify-center gap-3 active:scale-95">
                             START NOW <i className="fas fa-bolt"></i>
                         </button>
-                        <button className="bg-white hover:bg-gray-50 text-navy-900 font-bold py-5 px-10 rounded-2xl border-2 border-gray-100 shadow-xl transition-all duration-300 flex items-center justify-center gap-3 group">
-                            <div className="w-10 h-10 rounded-full bg-navy-900 text-white flex items-center justify-center transform group-hover:rotate-[360deg] transition-transform duration-700">
+                        <button className="bg-white hover:bg-gray-50 text-primary font-bold py-5 px-10 rounded-2xl border-2 border-primary-pale shadow-xl transition-all duration-300 flex items-center justify-center gap-3 group">
+                            <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center transform group-hover:rotate-[360deg] transition-transform duration-700">
                                 <i className="fas fa-play text-xs ml-1"></i>
                             </div>
                             SEE DEMO
@@ -83,13 +83,13 @@ const HeroSlider = () => {
             <div className="md:w-1/2 relative bg-white flex items-center justify-center p-4 md:p-8 overflow-hidden">
 
                 {/* Background Spikes */}
-                <div className="absolute inset-0 bg-navy-900/5 rotate-45 -z-10 translate-x-1/2"></div>
+                <div className="absolute inset-0 bg-primary/5 rotate-45 -z-10 translate-x-1/2"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-50"></div>
 
                 <div className="relative w-full max-w-2xl aspect-square z-10 flex items-center justify-center">
 
                     {/* Dark Shadow behind Splat */}
-                    <div className="absolute inset-5 bg-navy-900/40 blur-[120px] -z-10 animate-pulse-slow"></div>
+                    <div className="absolute inset-5 bg-primary/40 blur-[120px] -z-10 animate-pulse-slow"></div>
 
                     {/* Masked Mask Container using Very Spiky SVG clipPath */}
                     <div
@@ -97,13 +97,13 @@ const HeroSlider = () => {
                         style={{
                             clipPath: 'url(#inkSplatMask)',
                             WebkitClipPath: 'url(#inkSplatMask)',
-                            backgroundColor: '#0F172A'
+                            backgroundColor: '#09637E'
                         }}
                     >
                         <div className="flex h-full w-full transition-transform duration-1000 cubic-bezier(0.77, 0, 0.175, 1)" style={{ transform: `translate3d(-${current * 100}%, 0, 0)` }}>
                             {slides.map((slide) => (
                                 <div key={slide.id} className="min-w-full h-full relative group">
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-navy-900/40 via-transparent to-primary/20 z-10 opacity-60"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-navy/40 via-transparent to-primary/20 z-10 opacity-60"></div>
                                     <img src={slide.image} alt={slide.alt} className="w-full h-full object-cover transform scale-110 group-hover:scale-125 transition-transform duration-[5s]" />
                                 </div>
                             ))}
@@ -112,11 +112,11 @@ const HeroSlider = () => {
 
                     {/* Spiky Accents (Floating Diamonds) */}
                     <div className="absolute top-0 right-0 w-8 h-8 bg-primary/30 rotate-45 animate-bounce-slow"></div>
-                    <div className="absolute bottom-10 left-0 w-6 h-6 bg-emerald-500/30 rotate-[20deg] animate-bounce-delayed"></div>
+                    <div className="absolute bottom-10 left-0 w-6 h-6 bg-primary-light/30 rotate-[20deg] animate-bounce-delayed"></div>
                 </div>
 
                 {/* Vertical Indicators (Right Side) */}
-                <div className="absolute right-10 top-1/2 -translate-y-1/2 z-30 flex flex-col space-y-4 bg-navy-900/5 p-4 rounded-full backdrop-blur-xl border border-white/20">
+                <div className="absolute right-10 top-1/2 -translate-y-1/2 z-30 flex flex-col space-y-4 bg-primary/5 p-4 rounded-full backdrop-blur-xl border border-white/20">
                     {slides.map((_, index) => (
                         <button
                             key={index}
@@ -129,7 +129,7 @@ const HeroSlider = () => {
                 {/* Dynamic Counter Overlay */}
                 <div className="absolute bottom-12 left-12 z-30 transform hover:scale-110 transition-transform">
                     <div className="bg-white/90 backdrop-blur-3xl p-6 rounded-3xl shadow-2xl border border-white flex flex-col items-center">
-                        <span className="text-4xl font-black text-navy-900 tracking-tighter">0{current + 1}</span>
+                        <span className="text-4xl font-black text-primary tracking-tighter">0{current + 1}</span>
                         <div className="w-8 h-1 bg-primary mt-1"></div>
                         <span className="text-[10px] font-black text-gray-400 mt-2 uppercase tracking-widest">PHASE</span>
                     </div>
