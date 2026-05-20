@@ -152,3 +152,44 @@ Then open your browser to **http://localhost:5173** to see the login page!
 ---
 
 Maintained by MONARCH.
+
+---
+
+## Large files & Deployment
+
+- **Git LFS:** This repository uses Git LFS for one large binary (`Git-2.53.0-64-bit.exe`). If you clone the repo, install Git LFS first and fetch LFS objects:
+
+```bash
+# Install Git LFS (one-time)
+git lfs install
+
+# Clone the repo (LFS files will be pulled automatically after clone)
+git clone https://github.com/Subashav/monarch-Const.git
+
+# If you cloned before installing LFS, run:
+git lfs fetch --all
+git lfs checkout
+```
+
+- **Why LFS?** Large binaries exceed GitHub's recommended size and bloat Git history. We migrated the big file to LFS so history is smaller and pushes are efficient.
+
+- **Vercel deployment (recommended):** To host the frontend on Vercel:
+
+1. Sign up at https://vercel.com and connect your GitHub account.
+2. Import the repository `Subashav/monarch-Const` in Vercel (New Project → Import Git Repository).
+3. Use the following settings:
+	- Framework Preset: `Vite` (or `Other`)
+	- Build Command: `npm run build`
+	- Output Directory: `dist`
+4. Add any environment variables in the Vercel dashboard if your app needs them.
+5. Deploy — Vercel will run the build and host the site on a generated URL.
+
+Alternatively, you can deploy with the Vercel CLI:
+
+```bash
+npm i -g vercel
+vercel login
+vercel --prod
+```
+
+If you want, I can create a small `vercel.json` or GitHub Action to auto-deploy on push.
