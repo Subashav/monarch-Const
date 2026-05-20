@@ -55,6 +55,18 @@ const Home = () => {
             {/* Section 1: Hero Slider */}
             <HeroSlider />
 
+            {/* New Hero Banner (infralyze-style) */}
+            <section className="py-20 sm:py-28 px-4 sm:px-6 bg-gradient-to-b from-navy-900 via-navy-800 to-navy-900 text-white">
+                <div className="container mx-auto text-center max-w-4xl">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6">CONSTRUCTEVERYTHING.</h1>
+                    <p className="text-lg sm:text-xl md:text-2xl text-navy-100/90 mb-8">The spiky edge you need. Real-time manpower & material tracking for modern giants.</p>
+                    <div className="flex justify-center gap-4">
+                        <button onClick={() => navigate('/signup')} className="bg-primary px-6 py-3 rounded-full font-bold hover:bg-primary-light">START NOW</button>
+                        <button onClick={() => navigate('/demo')} className="bg-white/10 border border-white/20 px-6 py-3 rounded-full font-semibold">SEE DEMO</button>
+                    </div>
+                </div>
+            </section>
+
             {/* Section 2: Why Us (Value Proposition) */}
             <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-white">
                 <div className="container mx-auto text-center max-w-4xl">
